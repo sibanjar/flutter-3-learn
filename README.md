@@ -1,16 +1,58 @@
-# flutter_learn_377
+# Flutter Learn
 
-A new Flutter project.
+    - Firebase -> Authentication
+    - Cloud firestore
+    - login with facebook
+    - ads
+    - esewa
+    - use svg images
 
-## Getting Started
+# Apps must include
 
-This project is a starting point for a Flutter application.
+    - splash screen while loading files
+    - dark mode
+    - swipe down to refresh
+    - Nofication
+    - cache network image
+    - inapp database (sqlite, sqflite, hive, moor)
+    - worker background
+    - dispose (background action quit)
+    - prevent orentation
+    - use controller
+    - scroll indication
+    - bouncingscrollphysics
 
-A few resources to get you started if this is your first Flutter project:
+# Hive db
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+    - key-value pair (better than shared preferences)
+    - No sql lightweight offline database
+    - Most efficient database in terms of speed and performacne compared to sqflite and sharepreferenes.
+    - provides a very easy way to perform basic curd operation.
+    - Hive Terminology
+        - box - it is which data is stored in key value pair.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Widgets
+
+    - scaffold
+        - floating action button
+        - persistent footer button
+        - bottom navigation bar
+    - In app notification
+        - buttomsheet
+        - snackbar
+        - alert dialog
+        - simple dialog
+    - Layouts
+        - cards
+        - expanded
+    - Silver appbar
+    - pageview
+    - safearea
+    - clipreact
+    - future builder
+    - Text field
+    - Radio
+    - checkbox
+    - checkbox list tile
+    - slider
+    - date picker

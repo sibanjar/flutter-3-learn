@@ -6,14 +6,14 @@ void main() {
   // Elements:    N   N   N   N   N
   // Index:       0   1   2   3   4
 
-  var numbersList = List.filled(5, null, growable: false);        // Fixed-length list
+  List numbersList = List.filled(5,int, growable: false);        // Fixed-length list
   numbersList[0] = 73;  // Insert operation
   numbersList[1] = 64;
   numbersList[3] = 21;
   numbersList[4] = 12;
 
   numbersList[0] = 12;  // Update operation
-  numbersList[1] = null;// Delete operation
+  numbersList[1] = 10;// Delete operation
 
   print(numbersList[0]);
   print('\n');
@@ -29,7 +29,9 @@ void main() {
 
   print('\n');
 
-  numbersList.forEach((element) => print(element));           // Using Lambda
+  for (var element in numbersList) {
+    print(element);
+  }           // Using Lambda
 
   print('\n');
 

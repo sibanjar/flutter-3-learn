@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn_377/sqflite.dart';
 import 'package:flutter_learn_377/url_launcher.dart';
+import 'jsonimage/jsonimage.dart';
 import 'loginpage/loginpage.dart';
 import 'onboardui/onboarding_screen.dart';
 
@@ -130,7 +131,30 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const JsonImage()),
+                    );
+                  },
+                  child: Container(
+                    height: 50,
+                    width: MediaQuery.of(context).size.width * 0.8,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.blueAccent,
+                    ),
+                    child: const Center(
+                      child: Text(
+                        "Fetch Image"
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

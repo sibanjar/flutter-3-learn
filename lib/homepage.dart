@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn_377/screens/login_screen_stful.dart';
 import 'package:flutter_learn_377/sqflite.dart';
 import 'package:flutter_learn_377/url_launcher.dart';
 import 'jsonimage/jsonimage.dart';
@@ -20,139 +21,68 @@ class HomePage extends StatelessWidget {
             children: <Widget>[
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: GestureDetector(
-                  onTap: () {
+                child: ElevatedButton(
+                  onPressed: (){
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const LoginPage()),
                     );
-                  },
-                  child: Container(
-                    height: 50,
-                    width: MediaQuery.of(context).size.width * 0.8,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.blueAccent,
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Login Page",
-                        style: TextStyle(
-                            fontSize: 24,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
+                  }, child: const Text("Login Page"),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: GestureDetector(
-                  onTap: () {
+                child: ElevatedButton(
+                  onPressed: (){
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => OnboardingScreen()),
+                      MaterialPageRoute(builder: (context) => OnboardingScreen()),
                     );
-                  },
-                  child: Container(
-                    height: 50,
-                    width: MediaQuery.of(context).size.width * 0.8,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.blueAccent,
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Onboard ui",
-                        style: TextStyle(
-                            fontSize: 24,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
+                  }, child: const Text("Onboard ui"),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: GestureDetector(
-                  onTap: () {
+                child: ElevatedButton(
+                  onPressed: (){
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => UrlLauncher()),
                     );
-                  },
-                  child: Container(
-                    height: 50,
-                    width: MediaQuery.of(context).size.width * 0.8,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.blueAccent,
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Url launcher",
-                        style: TextStyle(
-                            fontSize: 24,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
+                  }, child: const Text("Url launcher"),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: GestureDetector(
-                  onTap: () {
+                child: ElevatedButton(
+                  onPressed: (){
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => SqfLite()),
                     );
-                  },
-                  child: Container(
-                    height: 50,
-                    width: MediaQuery.of(context).size.width * 0.8,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.blueAccent,
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "sqflite",
-                        style: TextStyle(
-                            fontSize: 24,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
+                  }, child: const Text("Sqflite"),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: GestureDetector(
-                  onTap: () {
+                child: ElevatedButton(
+                  onPressed: (){
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const JsonImage()),
                     );
-                  },
-                  child: Container(
-                    height: 50,
-                    width: MediaQuery.of(context).size.width * 0.8,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.blueAccent,
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Fetch Image"
-                      ),
-                    ),
-                  ),
+                  }, child: const Text("Fetch Image Json"),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                  onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginScreenStful()),
+                    );
+                  }, child: const Text("Login Stateful"),
                 ),
               ),
             ],

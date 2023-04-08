@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn_377/login_with_bloc/login_bloc.dart';
 import 'package:flutter_learn_377/screens/login_screen_stful.dart';
 import 'package:flutter_learn_377/sqflite.dart';
 import 'package:flutter_learn_377/url_launcher.dart';
@@ -80,9 +81,20 @@ class HomePage extends StatelessWidget {
                   onPressed: (){
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LoginScreenStful()),
+                      MaterialPageRoute(builder: (context) => const LoginScreenStful()),
                     );
                   }, child: const Text("Login Stateful"),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                  onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const LoginWithBloc()),
+                    );
+                  }, child: const Text("Login with BLOC"),
                 ),
               ),
             ],

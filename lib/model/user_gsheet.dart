@@ -1,8 +1,8 @@
 class UserFields {
-  static final String id = 'id';
-  static final String name = 'name';
-  static final String email = 'email';
-  static final String isAdmin = 'isAdmin';
+  static const String id = 'id';
+  static const String name = 'name';
+  static const String email = 'email';
+  static const String isAdmin = 'isAdmin';
 
   static List<String> getFields() => [id,name,email,isAdmin];
 }

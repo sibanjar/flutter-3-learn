@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import '../blocs/bloc.dart';
 
@@ -57,9 +58,14 @@ class LoginWithBloc extends StatelessWidget {
   }
 
   Widget submitButton(){
-    return ElevatedButton(
-        onPressed: () {},
-        child: const Text('Submit')
+    return StreamBuilder(
+      stream: bloc.submitValid,
+      builder: (context,snapshot){
+        return ElevatedButton(
+            onPressed: snapshot.hasData ? bloc.submit: null,
+            child: const Text('Submit')
+        );
+      }
     );
   }
 }

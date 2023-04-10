@@ -43,6 +43,7 @@ dev_dependencies:
   sqflite: ^2.2.6
   path: ^1.8.2
   http: ^0.13.5
+  rxdart: ^0.27.7
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

@@ -28,6 +28,7 @@ class LoginWithBloc extends StatelessWidget {
         stream: bloc.email,
         builder: (context,snapshot){ // snapshot -> contains what ever information come up on stream.
           return TextField(
+            // every time a builder is called, a new TextField instance and return it.
             onChanged: bloc.changeEmail,
             keyboardType: TextInputType.emailAddress,
             decoration: InputDecoration(

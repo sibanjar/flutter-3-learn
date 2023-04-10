@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-
 import 'homepage.dart';
 
+// import 'package:flutter/rendering.dart';
+
 Future<void> main() async {
+  // debugPaintSizeEnabled = true;
+
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(const MyApp());

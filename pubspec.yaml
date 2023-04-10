@@ -41,7 +41,6 @@ dev_dependencies:
     sdk: flutter
   url_launcher: ^6.1.10
   sqflite: ^2.2.6
-  sqlite3: ^1.11.0
   path_provider: ^2.0.14
   path: ^1.8.2
   http: ^0.13.5

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'homepage.dart';
-
+import 'theme/theme.dart';
 // import 'package:flutter/rendering.dart';
 
 Future<void> main() async {
@@ -17,12 +17,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    const testTheme = TestTheme();
     return MaterialApp(
         title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: const HomePage(),
+        // theme: ThemeData(primarySwatch: Colors.blue,),
+        theme: testTheme.toThemeData(),
+      home: const HomePage(),
       );
   }
 }

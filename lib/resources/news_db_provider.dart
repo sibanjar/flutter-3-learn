@@ -3,10 +3,15 @@ import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 import 'dart:async';
 import 'package:flutter_learn_377/model/item_model.dart';
+import 'news_repository.dart';
 import 'dart:io';
 
-class NewsDbProvider {
+class NewsDbProvider implements Source,Cache{
   late Database db;
+
+  NewsDbProvider(){
+    init();
+  }
 
   void init() async {
     Directory documentDirectory = await getApplicationDocumentsDirectory();
@@ -36,6 +41,13 @@ class NewsDbProvider {
     );
   }
 
+  // Todo - store and fetch top ids
+  @override
+  Future<List<int>>? fetchTopIds(){
+    return null;
+  }
+
+  @override
   Future<ItemModel?> fetchItem(int id) async{
     final maps = await db.query(
         'Items',
@@ -49,7 +61,11 @@ class NewsDbProvider {
     return null;
   }
 
+  @override
   Future<int> addItem(ItemModel item){
     return db.insert('Items', item.toMapForDb(item));
   }
 }
+
+final newsDbProvider = NewsDbProvider();
+// sqflite dont like opening same db of instance multiple time so, we will will this instance every time

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn_377/login_with_bloc/login_bloc.dart';
 import 'package:flutter_learn_377/screens/cat_animation.dart';
+import 'package:flutter_learn_377/screens/expense_tracker/expense_tracker.dart';
 import 'package:flutter_learn_377/screens/login_screen_stful.dart';
 import 'package:flutter_learn_377/sqflite.dart';
 import 'package:flutter_learn_377/url_launcher.dart';
@@ -107,6 +108,19 @@ class HomePage extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => const CatAnimation()),
                     );
                   }, child: const Text("Cat Animation"),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                  onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ExpenseTracker()),
+                    );
+                  }, child: Text("Expense Tracker",
+                          style: TextStyle(
+                              color: Theme.of(context).primaryColor)),
                 ),
               ),
             ],

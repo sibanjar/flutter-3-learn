@@ -63,6 +63,7 @@ class _NewTransactionState extends State<NewTransaction> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
+              Text(MediaQuery.of(context).viewInsets.bottom.toString()),
               TextField(
                 decoration: const InputDecoration(labelText: 'Title'),
                 controller: _titleController,

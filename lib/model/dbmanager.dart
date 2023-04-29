@@ -15,14 +15,12 @@ class DbStudentManager {
   Database? _database;
 
   Future openDb() async {
-    if (_database == null) {
-      _database = await openDatabase(
+    _database ??= await openDatabase(
           join(await getDatabasesPath(), "student.db"),
           version: 1, onCreate: (Database db, int version) async {
         await db.execute(
             "CREATE TABLE student(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, course TEXT)");
       });
-    }
   }
 
   Future<int> insertStudent(Student student) async {

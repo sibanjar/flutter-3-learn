@@ -30,8 +30,4 @@ void main(){
     ..strokeCap = 'round'
     ..strokeWidth = 5.0;
 
-  // Typecast
-  var number = 23 as String;
-  // number is String // true
-
 }

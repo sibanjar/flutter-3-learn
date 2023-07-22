@@ -1,7 +1,10 @@
 void main() {
+  // use const if value is known in compile time;
+  // use final if vlaue is only known in runtime;
 
   // final
   final cityName = 'Mumbai';
+  final date = DateTime.now();
   //	name = 'Peter';     // Throws an error
 
   final String countryName = 'India';

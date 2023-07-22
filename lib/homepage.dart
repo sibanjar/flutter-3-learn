@@ -5,6 +5,7 @@ import 'package:flutter_learn_377/screens/budget_ui/budget_ui.dart';
 import 'package:flutter_learn_377/screens/cat_animation.dart';
 import 'package:flutter_learn_377/screens/expense_tracker/expense_tracker.dart';
 import 'package:flutter_learn_377/screens/login_screen_stful.dart';
+import 'package:flutter_learn_377/screens/rotate_widget.dart';
 import 'package:flutter_learn_377/sqflite.dart';
 import 'package:flutter_learn_377/url_launcher.dart';
 import 'jsonimage/jsonimage.dart';
@@ -112,6 +113,14 @@ class HomePage extends StatelessWidget {
                 }, child: Text("Local Auth",
                         style: TextStyle(
                             color: Theme.of(context).primaryColor)),
+              ),
+              ElevatedButton(
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const RotateWidget()),
+                  );
+                }, child: const Text("Rotate Image",),
               ),
             ],
           ),

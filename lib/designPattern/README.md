@@ -20,22 +20,24 @@
       - https://namanrivaan.medium.com/builder-pattern-in-dart-flutter-why-is-builder-pattern-not-used-anymore-610a133e344c
 
 * Structural
-- Adapter
-- composite
-- proxy
-- fly weight
-- facade
-- bridge
-- decorator
+  - Adapter
+    - It is to convert the interface of a class into another interface clients expect.
+    - Adapter lets classes work together that couldn't otherwise because of incompatible interface.
+  - composite
+  - proxy
+  - fly weight
+  - facade
+  - bridge
+  - decorator
 
 * Behavioural
-- Template Method
-- Mediator
-- Chain of responsibility
-- observer
-- command
-- state
-- visitor
-- iterator
-- interpreter
-- memento
+  - Template Method
+  - Mediator
+  - Chain of responsibility
+  - observer
+  - command
+  - state
+  - visitor
+  - iterator
+  - interpreter
+  - memento

@@ -33,8 +33,12 @@ class MyFactoryHomePage extends StatelessWidget {
           children: [
             AbstractFactoryImpl().buildButton(context, employee.work(), () { }),
             AbstractFactoryImpl().buildIndicator(context),
-            AbstractFactoryImpl2.button(context, employee.work(), () { }),
-            AbstractFactoryImpl2.indicator(context)
+
+            AbstractFactoryImpl2.instance.buildButton(context, employee.work(), () { }), // using singleton
+            AbstractFactoryImpl2.instance.buildIndicator(context), // using singleton
+
+            AbstractFactoryImpl3.button(context, employee.work(), () { }),
+            AbstractFactoryImpl3.indicator(context)
           ],
         )
     );

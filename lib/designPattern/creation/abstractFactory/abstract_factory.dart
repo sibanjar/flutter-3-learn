@@ -33,8 +33,32 @@ class AbstractFactoryImpl implements AbstractFactory {
   }
 }
 
+class AbstractFactoryImpl2 implements AbstractFactory {
+  static AbstractFactoryImpl2? _instance;
+  AbstractFactoryImpl2._internal();
+
+  static AbstractFactoryImpl2 get instance {
+    _instance ??= AbstractFactoryImpl2._internal();
+    return _instance!;
+  }
+
+  @override
+  Widget buildButton(BuildContext context, String text, VoidCallback onPressed) {
+    return PlatformButton(Theme.of(context).platform).build(
+        onPressed,
+        Text(text)
+    );
+  }
+
+  @override
+  Widget buildIndicator(BuildContext context) {
+    return PlatformIndicator(Theme.of(context).platform).build();
+  }
+}
+
+
 // Implementation 2
-class AbstractFactoryImpl2 {
+class AbstractFactoryImpl3 {
   static Widget button(BuildContext context, String text, VoidCallback onPressed) {
     return PlatformButton(Theme.of(context).platform).build(
         onPressed,

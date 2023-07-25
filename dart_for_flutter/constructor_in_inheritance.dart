@@ -2,6 +2,12 @@
 // 1. Inheritance with Default Constructor and Parameterised Constructor
 // 2. Inheritance with Named Constructor
 
+
+// Types of constructors
+// 1. Factory constructors
+  // - doesn't create always creates a new instance of its class.
+// 2. Generative constructors -> default
+
 void main() {
 
   var dog1 = Dog('Labrador', 'Black');

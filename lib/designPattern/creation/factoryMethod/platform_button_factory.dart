@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+// What if we have 100 different platform specific widget -> see abstract factory
+
 abstract class PlatformButton {
   Widget build(VoidCallback onPressed, Widget child);
 

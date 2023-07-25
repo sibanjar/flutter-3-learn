@@ -1,8 +1,12 @@
 # Factory methods is to define an interface for creating an object, but we let subclasses decide which class to instantiate.
 * this is creation design pattern. (concerned with the way of creating objects. Object creation mechanism.)
     - singleton
-    - factory
+    - factory method
     - abstract factory
+      - It is a way to provide an interface for creating families of related or depended objects without specifying their concrete classes.
+      - It is a superset of factory method
+      - Alternate to Facade pattern.
+      - Also be implemented as Singleton / cause we want abstract class to have one instance only.
     - builder
     - prototype
 
@@ -12,7 +16,7 @@
 - proxy
 - fly weight
 - facade
-- bride
+- bridge
 - decorator
 
 * Behavioural

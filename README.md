@@ -1,3 +1,8 @@
+# Build Context
+  - Widget : where am I ? on Widget Tree.
+  - context gives information such that it can determine its next step depends on where/what.
+  - This is for vertical up direction only.
+
 # Flutter Learn
 
     - Firebase -> Authentication

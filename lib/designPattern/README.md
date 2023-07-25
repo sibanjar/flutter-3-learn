@@ -13,8 +13,11 @@
         - Only 1 instance of database
         - socket
         - eg: FirebaseAuth.instance.
-    - builder
     - prototype
+      - To specify the kinds of objects to create using a prototypical instance and create new object copying that prototype.
+      - It is cloning.
+    - builder
+      - https://namanrivaan.medium.com/builder-pattern-in-dart-flutter-why-is-builder-pattern-not-used-anymore-610a133e344c
 
 * Structural
 - Adapter

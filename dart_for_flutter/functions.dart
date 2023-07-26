@@ -18,6 +18,11 @@ void main() {
 
   print('arrowFunction ${arrowFunction(40)}');
 
+  printOptionalParameter('Rabin');
+  // See optional_pos_params-function
+
+  topLevelFunction(5);
+
 }
 
 void findPerimeter(int length, int breadth) {
@@ -40,6 +45,25 @@ namedParams({required int a, int b=5}){
   return a-b;
 }
 
-// arrow function
-arrowFunction(int number) => '$number minux 10 : ${number-10}';
+// optional parameter
+printOptionalParameter(String firstName,[String? lastName]){
+  print('$firstName ${lastName?? ''}');
+}
 
+// arrow function
+arrowFunction(int number) => '$number minus 10 : ${number-10}';
+
+//
+void topLevelFunction(int number){
+  print('inside topLevel Function');
+  String topLevel = 'Top level';
+
+  void innerFunction(){
+    print('inside inner Function');
+    print(number);
+    topLevel = 'Inner Level';
+    print(topLevel);
+  }
+
+  return innerFunction();
+}

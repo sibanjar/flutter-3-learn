@@ -12,6 +12,12 @@ void main() {
     }
   }
 
+  for (int j in List.generate(10, (index) => index)) {
+    if ( j % 2 == 0) {
+      print(j);
+    }
+  }
+
   // while
   // do while
 
@@ -19,7 +25,7 @@ void main() {
   // for ..in loop -- important
   var planetList = ['Mercury', 'Venus', 'Earth', 'Mars'];
 
-  for (var planet in planetList) {
+  for (String planet in planetList) {
     print(planet);
   }
 }

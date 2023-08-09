@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn_377/auth/local_auth.dart';
-import 'package:flutter_learn_377/login_with_bloc/login_bloc.dart';
 import 'package:flutter_learn_377/screens/budget_ui/budget_ui.dart';
 import 'package:flutter_learn_377/screens/cat_animation.dart';
 import 'package:flutter_learn_377/screens/expense_tracker/expense_tracker.dart';
-import 'package:flutter_learn_377/screens/login_screen_stful.dart';
 import 'package:flutter_learn_377/screens/rotate_widget.dart';
 import 'package:flutter_learn_377/sqflite.dart';
 import 'package:flutter_learn_377/url_launcher.dart';
@@ -64,22 +62,6 @@ class HomePage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const JsonImage()),
                   );
                 }, child: const Text("Fetch Image Json"),
-              ),
-              ElevatedButton(
-                onPressed: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const LoginScreenStful()),
-                  );
-                }, child: const Text("Login Stateful"),
-              ),
-              ElevatedButton(
-                onPressed: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const LoginWithBloc()),
-                  );
-                }, child: const Text("Login with BLOC"),
               ),
               ElevatedButton(
                 onPressed: (){

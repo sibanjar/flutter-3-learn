@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn_377/auth/local_auth.dart';
 import 'package:flutter_learn_377/screens/budget_ui/budget_ui.dart';
 import 'package:flutter_learn_377/screens/cat_animation.dart';
+import 'package:flutter_learn_377/screens/count_down.dart';
 import 'package:flutter_learn_377/screens/expense_tracker/expense_tracker.dart';
 import 'package:flutter_learn_377/screens/rotate_widget.dart';
 import 'package:flutter_learn_377/sqflite.dart';
@@ -103,6 +104,14 @@ class HomePage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const RotateWidget()),
                   );
                 }, child: const Text("Rotate Image",),
+              ),
+              ElevatedButton(
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const CountDown()),
+                  );
+                }, child: const Text("Count down.",),
               ),
             ],
           ),

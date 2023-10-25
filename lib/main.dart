@@ -24,7 +24,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    const testTheme = TestTheme();
+    const testTheme = TestTheme(
+
+    );
     return Platform.isIOS? const CupertinoApp(
       title: 'Flutter Demo',
       theme: CupertinoThemeData(
@@ -33,7 +35,9 @@ class MyApp extends StatelessWidget {
       ),
       home: HomePage(),
     ) : MaterialApp(
+
         title: 'Flutter Demo',
+        checkerboardOffscreenLayers: true,
         // theme: ThemeData(primarySwatch: Colors.blue,),
         theme: testTheme.toThemeData(),
       home: const HomePage(),

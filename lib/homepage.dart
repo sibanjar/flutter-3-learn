@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn_377/auth/local_auth.dart';
+import 'package:flutter_learn_377/feedback/feedhome.dart';
+import 'package:flutter_learn_377/newfeedback/new_feedhome.dart';
 import 'package:flutter_learn_377/screens/budget_ui/budget_ui.dart';
 import 'package:flutter_learn_377/screens/cat_animation.dart';
 import 'package:flutter_learn_377/screens/count_down.dart';
@@ -112,6 +114,22 @@ class HomePage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const CountDown()),
                   );
                 }, child: const Text("Count down.",),
+              ),
+              ElevatedButton(
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const FeedBackHome()),
+                  );
+                }, child: const Text("Feedback_home.",),
+              ),
+              ElevatedButton(
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const NewFeedbackHone()),
+                  );
+                }, child: const Text("Feedback_new.",),
               ),
             ],
           ),
